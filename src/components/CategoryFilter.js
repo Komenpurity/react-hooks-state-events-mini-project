@@ -1,10 +1,13 @@
 import React from "react";
 
-function CategoryFilter() {
+function CategoryFilter({categories}) {  
+  const list = categories.map((category,index) =>{
+      return (<button  key={index}>{category}</button>)
+  })
   return (
     <div className="categories">
       <h5>Category filters</h5>
-      {/* render <button> elements for each category here */}
+      {list} 
     </div>
   );
 }
